@@ -1,21 +1,38 @@
-@import url('./fonts.css');
+@import url("./fonts.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-black max-w-4xl h-screen mx-auto overflow-hidden select-none;
+  }
+}
+
+@layer components {
+  .page {
+    @apply w-full max-h-[70vh] relative px-8 py-16 overflow-auto;
+    /* background-color: rgba(255, 0, 0, 0.427) */
+  }
+
+  .setting {
+    @apply bg-sky-600 w-max absolute z-50 bottom-16 inset-x-1/2 -translate-x-1/2 flex items-center justify-center gap-x-5 py-2 px-4 outline outline-2 outline-offset-4 outline-sky-600 rounded-full;
+    box-shadow: 0 -1rem 6rem 1.5rem rgba(2, 132, 197, 0.6);
+  }
+}
+
 /* ============= SCROLL-BAR ============= */
 
 ::-webkit-scrollbar {
-    width: 0.2rem;
+  width: 0.2rem;
 }
 
 ::-webkit-scrollbar-track {
-    /* background: rgba(0, 0, 0, 0.5); */
-    border-radius: 1rem;
+  border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(2, 132, 197, 0.3);
-    border-radius: 1rem;
+  background: rgba(2, 132, 197, 0.4);
+  border-radius: 1rem;
 }
