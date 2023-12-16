@@ -5,7 +5,11 @@ export default {
     fontFamily: {
       sans: ['Poppins']
     },
-    extend: {},
+    extend: {
+      screens: {
+        'min-500': '500px',
+      }
+    },
   },
   plugins: [],
 };
