@@ -1,0 +1,21 @@
+@import url('./fonts.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============= SCROLL-BAR ============= */
+
+::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+::-webkit-scrollbar-track {
+    /* background: rgba(0, 0, 0, 0.5); */
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(2, 132, 197, 0.3);
+    border-radius: 1rem;
+}
