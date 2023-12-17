@@ -12,7 +12,7 @@
 
 @layer components {
   .page {
-    @apply w-full max-h-[70vh] relative px-8 py-16 overflow-auto;
+    @apply w-full max-h-[70vh] relative px-8 pt-16 overflow-auto;
     /* background-color: rgba(255, 0, 0, 0.427) */
   }
 
