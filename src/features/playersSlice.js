@@ -17,9 +17,36 @@ const playersSlice = createSlice({
     removeAllPlayers: (state) => {
       return (state = []);
     },
+
+    randomizeRoles: (state, { payload }) => {
+      const randomNumbers = [];
+      let iterationCount = state.length;
+
+      for (let i = 0; i < iterationCount; i++) {
+        const randomNumber = Math.floor(Math.random() * state.length);
+        const numberIsExist = randomNumbers.some(
+          (number) => number === randomNumber
+        );
+
+        numberIsExist ? iterationCount++ : randomNumbers.push(randomNumber);
+      }
+
+      const gettingLocal = JSON.parse(localStorage.getItem("roles"));
+      if (!payload.length) {
+        state.forEach((item, index) => {
+          item.role = gettingLocal[randomNumbers[index]];
+        });
+
+        return;
+      }
+
+      state.forEach((item, index) => {
+        item.role = payload[randomNumbers[index]];
+      });
+    },
   },
 });
 
-export const { addPlayer, removePlayer, removeAllPlayers } =
+export const { addPlayer, removePlayer, removeAllPlayers, randomizeRoles } =
   playersSlice.actions;
 export default playersSlice.reducer;

@@ -52,7 +52,7 @@ export default function SelectingRoles() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    localStorage.setItem("select", JSON.stringify(roles));
+    localStorage.setItem("roles", JSON.stringify(roles));
   }, [roles]);
 
   useEffect(() => {

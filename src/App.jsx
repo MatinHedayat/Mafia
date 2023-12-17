@@ -3,7 +3,7 @@ import {
   Launcher,
   AddPlayers,
   SelectingRoles,
-  // RandomizeRoles,
+  RandomizeRoles,
 } from "./components/pages/exporter";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -22,7 +22,7 @@ export default function App() {
           <Route path='/' element={<Launcher />} />
           <Route path='add-players' element={<AddPlayers />} />
           <Route path='selecting-roles' element={<SelectingRoles />} />
-          {/* <Route path='randomize-roles' element={<RandomizeRoles />} /> */}
+          <Route path='randomize-roles' element={<RandomizeRoles />} />
         </Routes>
       </div>
     </>
